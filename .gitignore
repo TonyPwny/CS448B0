@@ -4,8 +4,8 @@
 #
 /Roll a Ball/[Ll]ibrary/
 /Roll a Ball/[Oo]bj/
-/Roll a Ball/[Bb]uild/
-/Roll a Ball/[Bb]uilds/
+#/Roll a Ball/[Bb]uild/
+#/Roll a Ball/[Bb]uilds/
 /Roll a Ball/[Ll]ogs/
 /Roll a Ball/[Mm]emoryCaptures/
 
@@ -52,6 +52,7 @@ sysinfo.txt
 
 # Builds
 *.apk
+*.app
 *.unitypackage
 
 # Crashlytics generated file
