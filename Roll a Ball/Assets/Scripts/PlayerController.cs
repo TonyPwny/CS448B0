@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpPower;
     public string playerNumber;
+    public string otherPlayer;
     public Text scoreText;
     public Text promptText;
     public Text gameOverText;
@@ -34,7 +35,15 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         score = 0;
-        SetScoreText();
+        if (playerNumber.Equals("1"))
+        {
+            scoreText.text = "P" + playerNumber + ": W,S,A,D to Move, Spacebar to Jump";
+        }
+        else
+        {
+            scoreText.text = "P" + playerNumber + ": Arrows to Move, Right Shift to Jump";
+        }
+        
         promptText.text = "Press Enter/Return to Begin";
         gameOverText.text = "";
     }
@@ -47,10 +56,16 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-        if (Input.GetKey(KeyCode.Return))
+        if (Input.GetButton("Submit"))
         {
+            SetScoreText();
             promptText.text = "Press Esc to Start Over";
             GameManager.inPlay = true; //enables all inputs
+        }
+
+        if (rb.transform.position.y < -5)
+        {
+            gameOverText.text = "P" + playerNumber + " has fallen!" + "\nP" + otherPlayer + " wins!";
         }
 
     }
@@ -105,7 +120,7 @@ public class PlayerController : MonoBehaviour
 
     void SetScoreText()
     {
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = "P" + playerNumber + " Score: " + score.ToString();
 
         if (score >= 12)
         {
