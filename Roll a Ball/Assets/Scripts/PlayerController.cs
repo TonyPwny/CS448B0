@@ -114,10 +114,5 @@ public class PlayerController : MonoBehaviour
     void SetScoreText()
     {
         scoreText.text = "P" + playerNumber + " Score: " + score.ToString();
-
-        if (score >= 12)
-        {
-            gameOverText.text = "You Win!";
-        }
     }
 }
