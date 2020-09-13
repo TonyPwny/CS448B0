@@ -1732,7 +1732,7 @@ GameObject:
   - component: {fileID: 1039688448}
   - component: {fileID: 1039688447}
   m_Layer: 5
-  m_Name: P1 Score Text
+  m_Name: P1 Prompt/Score Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1755,7 +1755,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 325, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1039688447
 MonoBehaviour:
@@ -1790,7 +1790,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: P1 Score Text
+  m_Text: P1 Prompt/Score Text
 --- !u!222 &1039688448
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1976,7 +1976,7 @@ GameObject:
   - component: {fileID: 1419125909}
   - component: {fileID: 1419125908}
   m_Layer: 5
-  m_Name: P2 Score Text
+  m_Name: P2 Prompt/Score Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1999,7 +1999,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -25}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 325, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1419125908
 MonoBehaviour:
@@ -2034,7 +2034,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: P2 Score Text
+  m_Text: P2 Prompt/Score Text
 --- !u!222 &1419125909
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -1,4 +1,4 @@
-﻿// Anthony Tiongson
+﻿// Anthony Tiongson (ast119)
 // https://learn.unity.com/project/roll-a-ball-tutorial
 using System.Collections;
 using System.Collections.Generic;
