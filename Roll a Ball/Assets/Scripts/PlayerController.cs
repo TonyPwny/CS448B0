@@ -35,15 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         score = 0;
-        if (playerNumber.Equals("1"))
-        {
-            scoreText.text = "P" + playerNumber + ": W,S,A,D to Move, Spacebar to Jump";
-        }
-        else
-        {
-            scoreText.text = "P" + playerNumber + ": Arrows to Move, Right Shift to Jump";
-        }
-        
+        scoreText.text = "";
         promptText.text = "Press Enter/Return to Begin";
         gameOverText.text = "";
     }
