@@ -1,4 +1,4 @@
-﻿// Anthony Tiongson
+﻿// Anthony Tiongson (ast119)
 // https://learn.unity.com/project/roll-a-ball-tutorial
 // https://answers.unity.com/questions/1417767/c-how-to-check-if-player-is-grounded.html
 // https://answers.unity.com/questions/1275232/disable-all-inputs.html
@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButton("Cancel"))
         {
+            GameManager.inPlay = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
