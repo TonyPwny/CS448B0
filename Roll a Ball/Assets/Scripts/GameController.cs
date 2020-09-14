@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
     {
         gameRulesText.text = "Roll A Ball Deluxe" + "\n" +
             "The time limit is set to " + timeLimit + " min." + "\n" +
-            "Golden cubes are worth points and will respawn every 10 seconds." + "\n" +
+            "Golden cubes are worth points and will respawn after 10 seconds." + "\n" +
             "Every 10 seconds, golden cubes gain an additional point of value." + "\n" +
             "Colliding with walls will deduct a point." + "\n" +
             "Colliding with the opponent at a higher height reduces their points!" + "\n" +
