@@ -9,22 +9,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-
-public class GameManager : MonoBehaviour
-{
-    public static bool inPlay = false;
-}
 
 public class PlayerController : MonoBehaviour
 {
     public float speed;
     public float jumpPower;
     public string playerNumber;
-    public string otherPlayer;
     public Text scoreText;
-    public Text promptText;
-    public Text gameOverText;
 
     private Rigidbody rb;
     private int score;
@@ -36,37 +27,22 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         score = 0;
         scoreText.text = "";
-        promptText.text = "Press Enter/Return to Begin";
-        gameOverText.text = "";
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Cancel"))
-        {
-            GameManager.inPlay = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-
         if (Input.GetButton("Submit"))
         {
             SetScoreText();
-            promptText.text = "Press Esc to Start Over";
-            GameManager.inPlay = true; //enables all inputs
+            GameController.inPlay = true; //enables all inputs
         }
-
-        if (rb.transform.position.y < -5)
-        {
-            gameOverText.text = "P" + playerNumber + " has fallen!" + "\nP" + otherPlayer + " wins!";
-        }
-
     }
     
     // FixedUpdate is called just before performing any physics calculations
     void FixedUpdate()
     {
-        if (GameManager.inPlay)
+        if (GameController.inPlay)
         {
             float moveHorizontal = Input.GetAxis(playerNumber + "_Horizontal");
             float moveVertical = Input.GetAxis(playerNumber + "_Vertical");
@@ -84,13 +60,12 @@ public class PlayerController : MonoBehaviour
     }
 
     // Deactivates Pick Ups that the player touches
-    void OnTriggerEnter(Collider pickUp)
+    void OnTriggerEnter(Collider collision)
     {
-        if (pickUp.gameObject.CompareTag("Pick Up"))
+        if (collision.gameObject.CompareTag("Pick Up"))
         {
-            pickUp.gameObject.SetActive(false);
-            score += 1;
-            SetScoreText();
+            collision.gameObject.SetActive(false);
+            IncremenentScore();
         }
     }
 
@@ -100,7 +75,6 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = false;
         }
-        
     }
 
     void OnCollisionEnter(Collision collision)
@@ -109,10 +83,40 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
+
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            DecrementScore();
+        }
+
+        if (collision.gameObject.CompareTag("Player") && (transform.position.y < (collision.transform.position.y - 0.01)))
+        {
+            DecrementScore();
+        }
     }
 
     void SetScoreText()
     {
         scoreText.text = "P" + playerNumber + " Score: " + score.ToString();
+    }
+
+    void DecrementScore()
+    {
+        if (score > 0)
+        {
+            score--;
+            SetScoreText();
+        }
+    }
+
+    void IncremenentScore()
+    {
+        score++;
+        SetScoreText();
+    }
+
+    int MyScore()
+    {
+        return score;
     }
 }

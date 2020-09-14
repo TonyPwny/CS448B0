@@ -27,5 +27,10 @@ public class CameraController : MonoBehaviour
     void LateUpdate()
     {
         transform.position = ((playerOne.transform.position + playerTwo.transform.position) / 2) + offset;
+
+        if ((playerOne.transform.position.y < -5) || (playerTwo.transform.position.y < -5))
+        {
+            transform.position = new Vector3 (0, 8, -12);
+        }
     }
 }
