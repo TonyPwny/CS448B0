@@ -217,6 +217,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80602375}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &100193273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 489825412}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &100193275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100193273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &115212751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2088542914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &115212753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115212751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &179686153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -227,7 +263,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (2)
+      value: Gold Cube (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -294,7 +330,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50000024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
 --- !u!1001 &181189444
 PrefabInstance:
@@ -306,7 +353,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (3)
+      value: Gold Cube (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -378,7 +425,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
 --- !u!1 &246692288
 GameObject:
@@ -602,6 +660,7 @@ RectTransform:
   - {fileID: 2058288624}
   - {fileID: 2122769058}
   - {fileID: 877316880}
+  - {fileID: 1430251702}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -620,7 +679,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (11)
+      value: Gold Cube (11)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -687,7 +746,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50000024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
 --- !u!1 &276251702
 GameObject:
@@ -810,12 +880,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptText: {fileID: 827147164}
+  gameRulesText: {fileID: 1430251703}
   controlsP1Text: {fileID: 2122769059}
   controlsP2Text: {fileID: 877316881}
   gameOverText: {fileID: 1873146713}
-  playerOne: {fileID: 246692288}
-  playerTwo: {fileID: 525944693}
-  timeLimit: 1
+  playerOne: {fileID: 246692289}
+  playerTwo: {fileID: 525944695}
+  timeLimit: 2
 --- !u!4 &388442841
 Transform:
   m_ObjectHideFlags: 0
@@ -830,6 +901,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &391744173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 409671072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &391744175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391744173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &409671072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -840,7 +929,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (7)
+      value: Gold Cube (7)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -907,7 +996,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50000024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
 --- !u!4 &434004689 stripped
 Transform:
@@ -991,7 +1091,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (5)
+      value: Gold Cube (5)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -1058,7 +1158,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50000024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
 --- !u!4 &502203207 stripped
 Transform:
@@ -1201,7 +1312,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (15)
+      value: Gold Cube (15)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -1268,7 +1379,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50000024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
 --- !u!4 &597919369 stripped
 Transform:
@@ -1282,6 +1404,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 769627288}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &617450172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 660178478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &617450174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617450172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &623382731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,7 +1530,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (8)
+      value: Gold Cube (8)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -1457,7 +1597,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50000024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
 --- !u!1 &645708513
 GameObject:
@@ -1561,7 +1712,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (14)
+      value: Gold Cube (14)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -1628,7 +1779,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50000024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
 --- !u!4 &660178479 stripped
 Transform:
@@ -1652,7 +1814,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (6)
+      value: Gold Cube (6)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -1719,7 +1881,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50000024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
 --- !u!1 &813972352
 GameObject:
@@ -1831,6 +2004,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827147162}
   m_CullTransparentMesh: 0
+--- !u!1 &827683747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1073955640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &827683749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827683747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &867224529
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,6 +2198,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1457625076}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &903406923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1128825126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &903406925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903406923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &943853125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
@@ -2047,6 +2256,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &989128408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1898744252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &989128410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989128408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1007402794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1311791710}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1007402796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007402794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1017387744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1457625076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1017387746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017387744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1039688445
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,7 +2399,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (13)
+      value: Gold Cube (13)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -2203,7 +2466,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50000024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
 --- !u!4 &1073955641 stripped
 Transform:
@@ -2227,7 +2501,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (9)
+      value: Gold Cube (9)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -2294,7 +2568,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50000024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
 --- !u!1 &1138423171
 GameObject:
@@ -2328,6 +2613,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1283920316 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 642540471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1283920318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283920316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1294107954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 597919368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1294107956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294107954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1311791710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2338,7 +2659,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (12)
+      value: Gold Cube (12)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -2405,7 +2726,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50000024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
 --- !u!4 &1311791711 stripped
 Transform:
@@ -2422,8 +2754,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1363487388}
+  - component: {fileID: 1363487389}
   m_Layer: 0
-  m_Name: Pick Ups
+  m_Name: Items
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2459,6 +2792,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1363487389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363487387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cdb46b9c8dff4f7d8b39b4253c63c5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 10
 --- !u!4 &1398074902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
@@ -2544,6 +2890,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419125906}
   m_CullTransparentMesh: 0
+--- !u!1 &1430251701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1430251702}
+  - component: {fileID: 1430251704}
+  - component: {fileID: 1430251703}
+  m_Layer: 5
+  m_Name: Game Rules Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1430251702
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430251701}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 273198336}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -10}
+  m_SizeDelta: {x: 600, y: 600}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1430251703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430251701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.5019608, b: 0.2509804, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 18
+    m_FontStyle: 3
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Game Rules Text
+--- !u!222 &1430251704
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430251701}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1457625076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2554,7 +2979,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (1)
+      value: Gold Cube (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -2621,14 +3046,61 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50000024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
+--- !u!1 &1546055992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 179686153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1546055994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546055992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1578209781 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
     type: 3}
   m_PrefabInstance: {fileID: 489825412}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1648446215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 181189444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1648446217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648446215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1685378110 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
@@ -2859,7 +3331,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (10)
+      value: Gold Cube (10)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -2926,7 +3398,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50000024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
 --- !u!4 &1917350333 stripped
 Transform:
@@ -2934,6 +3417,42 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 273557143}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1971967452 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 273557143}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1971967454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971967452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1972565864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 769627288}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1972565866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972565864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2058288623
 GameObject:
   m_ObjectHideFlags: 0
@@ -2984,7 +3503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 0.627451, a: 1}
+  m_Color: {r: 1, g: 0.5019608, b: 0.2509804, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3023,7 +3542,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up (4)
+      value: Gold Cube (4)
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -3095,7 +3614,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
 --- !u!1 &2110072086
 GameObject:
@@ -3267,6 +3797,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122769057}
   m_CullTransparentMesh: 0
+--- !u!1 &2133213714 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6464032168418826860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2133213716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133213714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce7de05d146148d58b66fe0901cacee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6464032168418826860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3277,7 +3825,7 @@ PrefabInstance:
     - target: {fileID: 6464032168003975328, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
       propertyPath: m_Name
-      value: Pick Up
+      value: Gold Cube
       objectReference: {fileID: 0}
     - target: {fileID: 6464032168003975357, guid: deb7645a59e1742d1a051db230b5743d,
         type: 3}
@@ -3344,5 +3892,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.50000024
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d,
+        type: 3}
+      propertyPath: respawnTime
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6464032168003975329, guid: deb7645a59e1742d1a051db230b5743d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb7645a59e1742d1a051db230b5743d, type: 3}

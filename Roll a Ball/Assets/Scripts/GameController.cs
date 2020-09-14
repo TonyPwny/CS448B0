@@ -3,6 +3,7 @@
 // https://answers.unity.com/questions/1417767/c-how-to-check-if-player-is-grounded.html
 // https://answers.unity.com/questions/1275232/disable-all-inputs.html
 // https://answers.unity.com/questions/1261937/creating-a-restart-button.html
+// https://www.youtube.com/watch?v=qc7J0iei3BU
 
 using System.Collections;
 using System.Collections.Generic;
@@ -14,11 +15,12 @@ public class GameController : MonoBehaviour
 {
 
     public Text promptText;
+    public Text gameRulesText;
     public Text controlsP1Text;
     public Text controlsP2Text;
     public Text gameOverText;
-    public GameObject playerOne;
-    public GameObject playerTwo;
+    public PlayerController playerOne;
+    public PlayerController playerTwo;
     public int timeLimit;
     public static bool inPlay = false;
 
@@ -27,6 +29,13 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameRulesText.text = "Roll A Ball Deluxe" + "\n" +
+            "The time limit is set to " + timeLimit + " min." + "\n" +
+            "Golden cubes are worth points and will respawn every 10 seconds." + "\n" +
+            "Every 10 seconds, golden cubes gain an additional point of value." + "\n" +
+            "Colliding with walls will deduct a point." + "\n" +
+            "Colliding with the opponent at a higher height reduces their points!" + "\n" +
+            "Falling is an instant disqualification!"; 
         promptText.text = "Press Enter/Return to Begin";
         controlsP1Text.text = "P1 Uses W, S, A, D to Move\nSpacebar to Jump";
         controlsP2Text.text = "P2 Uses Arrow Keys to Move\nRight Shift to Jump";
@@ -39,8 +48,11 @@ public class GameController : MonoBehaviour
         if (Input.GetButton("Submit") && !inPlay && !gameOver)
         {
             promptText.text = "Press Esc to Start Over";
+            gameRulesText.text = "";
             controlsP1Text.text = "";
             controlsP2Text.text = "";
+            playerOne.SetScoreText();
+            playerTwo.SetScoreText();
             TimeController.instance.BeginTimer();
             inPlay = true;
         }

@@ -3,7 +3,7 @@
 // https://answers.unity.com/questions/1417767/c-how-to-check-if-player-is-grounded.html
 // https://answers.unity.com/questions/1275232/disable-all-inputs.html
 // https://answers.unity.com/questions/1261937/creating-a-restart-button.html
-
+// https://www.youtube.com/watch?v=qc7J0iei3BU
 
 using System.Collections;
 using System.Collections.Generic;
@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
     private int score;
+    private int bonus;
     private bool isGrounded = true;
 
     // Start is called before the first frame update
@@ -26,15 +27,16 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         score = 0;
+        bonus = 0;
         scoreText.text = "";
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GameController.inPlay)
+        if (TimeController.instance.ElapsedSeconds() >= 10)
         {
-            SetScoreText();
+            bonus = (TimeController.instance.ElapsedSeconds() / 10) + 1;
         }
     }
     
@@ -58,14 +60,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Deactivates Pick Ups that the player touches
+    // Increments score whenever the player touches any Pick Ups
     void OnTriggerEnter(Collider collision)
     {
         if (GameController.inPlay)
         {
-            if (collision.gameObject.CompareTag("Pick Up"))
+            if (collision.gameObject.CompareTag("Pick Up") && GameController.inPlay)
             {
-                collision.gameObject.SetActive(false);
                 IncremenentScore();
             }
         }
@@ -100,11 +101,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void SetScoreText()
-    {
-        scoreText.text = "P" + playerNumber + " Score: " + score.ToString();
-    }
-
     void DecrementScore()
     {
         if (score > 0)
@@ -116,11 +112,23 @@ public class PlayerController : MonoBehaviour
 
     void IncremenentScore()
     {
-        score++;
+        if (TimeController.instance.ElapsedSeconds() >= 10)
+        {
+            score = score + bonus;
+        }
+        else
+        {
+            score++;
+        }
         SetScoreText();
     }
 
-    int MyScore()
+    public void SetScoreText()
+    {
+        scoreText.text = "P" + playerNumber + " Score: " + score.ToString();
+    }
+
+    public int MyScore()
     {
         return score;
     }
