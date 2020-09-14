@@ -29,7 +29,10 @@ public class TimeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!GameController.inPlay)
+        {
+            timerOn = false;
+        }
     }
 
     public void BeginTimer()
@@ -43,6 +46,11 @@ public class TimeController : MonoBehaviour
     public void EndTimer()
     {
         timerOn = false;
+    }
+
+    public int Minutes()
+    {
+        return gameTimer.Minutes;
     }
 
     private IEnumerator UpdateTimer()

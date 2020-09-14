@@ -19,7 +19,10 @@ public class GameController : MonoBehaviour
     public Text gameOverText;
     public GameObject playerOne;
     public GameObject playerTwo;
+    public int timeLimit;
     public static bool inPlay = false;
+
+    private bool gameOver = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,28 +36,39 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Cancel"))
-        {
-            inPlay = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-
-        if (Input.GetButton("Submit"))
+        if (Input.GetButton("Submit") && !inPlay && !gameOver)
         {
             promptText.text = "Press Esc to Start Over";
             controlsP1Text.text = "";
             controlsP2Text.text = "";
             TimeController.instance.BeginTimer();
-            inPlay = true; //enables all inputs
+            inPlay = true;
+        }
+
+        if (Input.GetButton("Cancel"))
+        {
+            inPlay = false;
+            gameOver = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         if (playerOne.transform.position.y < -5 && playerTwo.transform.position.y >= -5)
         {
+            inPlay = false;
+            gameOver = true;
             gameOverText.text = "P1 has fallen!" + "\nP2 wins!";
         }
         else if (playerTwo.transform.position.y < -5 && playerOne.transform.position.y >= -5)
         {
+            inPlay = false;
+            gameOver = true;
             gameOverText.text = "P2 has fallen!" + "\nP1 wins!";
+        }
+
+        if (TimeController.instance.Minutes() >= timeLimit)
+        {
+            inPlay = false;
+            gameOver = true;
         }
     }
 }

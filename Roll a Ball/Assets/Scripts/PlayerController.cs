@@ -32,10 +32,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Submit"))
+        if (GameController.inPlay)
         {
             SetScoreText();
-            GameController.inPlay = true; //enables all inputs
         }
     }
     
@@ -62,10 +61,13 @@ public class PlayerController : MonoBehaviour
     // Deactivates Pick Ups that the player touches
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Pick Up"))
+        if (GameController.inPlay)
         {
-            collision.gameObject.SetActive(false);
-            IncremenentScore();
+            if (collision.gameObject.CompareTag("Pick Up"))
+            {
+                collision.gameObject.SetActive(false);
+                IncremenentScore();
+            }
         }
     }
 
@@ -84,14 +86,17 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
         }
 
-        if (collision.gameObject.CompareTag("Wall"))
+        if (GameController.inPlay)
         {
-            DecrementScore();
-        }
+            if (collision.gameObject.CompareTag("Wall"))
+            {
+                DecrementScore();
+            }
 
-        if (collision.gameObject.CompareTag("Player") && (transform.position.y < (collision.transform.position.y - 0.01)))
-        {
-            DecrementScore();
+            if (collision.gameObject.CompareTag("Player") && (transform.position.y < (collision.transform.position.y - 0.01)))
+            {
+                DecrementScore();
+            }
         }
     }
 
