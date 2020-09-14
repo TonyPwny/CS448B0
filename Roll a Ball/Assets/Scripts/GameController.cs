@@ -81,6 +81,19 @@ public class GameController : MonoBehaviour
         {
             inPlay = false;
             gameOver = true;
+
+            if (playerOne.MyScore() > playerTwo.MyScore())
+            {
+                gameOverText.text = "P1 is victorious!";
+            }
+            else if (playerOne.MyScore() < playerTwo.MyScore())
+            {
+                gameOverText.text = "P2 is victorious!";
+            }
+            else
+            {
+                gameOverText.text = "Stalemate!" + "\n" + "Rematch?";
+            }
         }
     }
 }
