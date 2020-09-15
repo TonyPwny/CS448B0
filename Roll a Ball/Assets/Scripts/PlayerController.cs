@@ -98,16 +98,17 @@ public class PlayerController : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Wall"))
             {
-                GameController.instance.MakeAnnouncement("P" + playerNumber + " received a penalty for hitting the wall.", 3);
-                DecrementScore();
+                GameController.instance.MakeAnnouncement("P" + playerNumber + " received a point penalty for hitting the wall.", 3);
+                DecrementScore(1);
             }
 
             if (collision.gameObject.CompareTag("Player"))
             {
                 if (transform.position.y < (collision.transform.position.y - 0.01))
                 {
-                    GameController.instance.MakeAnnouncement("P" + playerOtherNumber + " knocked a point off of P" + playerNumber + "!", 3);
-                    DecrementScore();
+                    int multiplier = (int)((collision.transform.position.y - transform.position.y) * 70);
+                    GameController.instance.MakeAnnouncement("P" + playerOtherNumber + " knocked " + multiplier + " points off of P" + playerNumber + "!", 3);
+                    DecrementScore(multiplier);
                 }
                 else if (!(transform.position.y > collision.transform.position.y))
                 {
@@ -117,11 +118,26 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void DecrementScore()
+    void DecrementScore(int multiplier)
     {
         if (score > 0)
         {
-            score--;
+            if (multiplier == 0)
+            {
+                score--;
+            }
+            else
+            {
+                if ((score - multiplier) < 0)
+                {
+                    score = 0;
+                }
+                else
+                {
+                    score = score - multiplier;
+                }
+            }
+
             SetScoreText();
         }
         else if (score == 0)

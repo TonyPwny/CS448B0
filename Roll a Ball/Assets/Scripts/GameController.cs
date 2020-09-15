@@ -49,11 +49,12 @@ public class GameController : MonoBehaviour
         timeLimitSeconds = timeLimit * 60;
         gameRulesText.text = "Game Rules" + "\n" +
             "The time limit is set to " + timeLimit + " min. (" + timeLimitSeconds + " sec.)\n" +
-            "Golden cubes are worth points and will respawn after 10 seconds." + "\n" +
-            "Every 10 seconds, golden cubes gain an additional point of value." + "\n" +
-            "Colliding with walls will deduct a point." + "\n" +
-            "Colliding with the opponent at a higher height reduces their points!" + "\n" +
-            "Falling is an instant disqualification!"; 
+            "Golden cubes are worth points and will respawn after 10 seconds.\n" +
+            "Every 10 seconds, golden cubes gain an additional point of value.\n" +
+            "Colliding with walls will deduct a point.\n" +
+            "Colliding with the opponent at a higher height reduces their points!\n" +
+            "The higher you hit your opponent, the more points you knock off!\n" + 
+            "Falling off is an instant disqualification!"; 
         promptText.text = "Press Enter/Return to Begin";
         controlsP1Text.text = "P1 Uses W, S, A, D to Move\nSpacebar to Jump";
         controlsP2Text.text = "P2 Uses Arrow Keys to Move\nRight Shift to Jump";
