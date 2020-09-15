@@ -8,6 +8,7 @@
 // https://gamedev.stackexchange.com/questions/151670/unity-how-to-detect-collision-occuring-on-child-object-from-a-parent-script
 // https://learn.unity.com/tutorial/fps-mod-customize-the-sky
 // https://learn.unity.com/project/roll-a-ball-tutorial
+// https://answers.unity.com/questions/406479/stopping-an-ienumerator-function.html
 // https://www.youtube.com/watch?v=qc7J0iei3BU
 
 using System.Collections;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpPower;
     public string playerNumber;
+    public string playerOtherNumber;
     public Text scoreText;
 
     private Rigidbody rb;
@@ -96,12 +98,21 @@ public class PlayerController : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Wall"))
             {
+                GameController.instance.MakeAnnouncement("P" + playerNumber + " received a penalty for hitting the wall.", 3);
                 DecrementScore();
             }
 
-            if (collision.gameObject.CompareTag("Player") && (transform.position.y < (collision.transform.position.y - 0.01)))
+            if (collision.gameObject.CompareTag("Player"))
             {
-                DecrementScore();
+                if (transform.position.y < (collision.transform.position.y - 0.01))
+                {
+                    GameController.instance.MakeAnnouncement("P" + playerOtherNumber + " knocked a point off of P" + playerNumber + "!", 3);
+                    DecrementScore();
+                }
+                else if (!(transform.position.y > collision.transform.position.y))
+                {
+                    GameController.instance.MakeAnnouncement("Both players collided evenly, no penalty.", 3);
+                }
             }
         }
     }
@@ -112,6 +123,10 @@ public class PlayerController : MonoBehaviour
         {
             score--;
             SetScoreText();
+        }
+        else if (score == 0)
+        {
+            GameController.instance.MakeAnnouncement("Ouch, P" + playerNumber + " is struggling...Yikes...", 3);
         }
     }
 

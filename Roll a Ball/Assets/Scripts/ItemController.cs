@@ -8,6 +8,7 @@
 // https://gamedev.stackexchange.com/questions/151670/unity-how-to-detect-collision-occuring-on-child-object-from-a-parent-script
 // https://learn.unity.com/tutorial/fps-mod-customize-the-sky
 // https://learn.unity.com/project/roll-a-ball-tutorial
+// https://answers.unity.com/questions/406479/stopping-an-ienumerator-function.html
 // https://www.youtube.com/watch?v=qc7J0iei3BU
 
 using System.Collections;
