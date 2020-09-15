@@ -77,7 +77,7 @@ public class TimeController : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             gameTimer = TimeSpan.FromSeconds(elapsedTime);
-            string gameTime = gameTimer.ToString("mm':'ss'.'ff");
+            string gameTime = gameTimer.ToString("m':'ss");
             gameTimerText.text = gameTime;
 
             yield return null;
